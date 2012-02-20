@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="cn.edu.tsinghua.hpc"
+    android:versionCode="1"
+    android:versionName="1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:icon="@drawable/market"
+        android:label="@string/app_name" >
+        <receiver android:name="LaunchAppReceiver" >
+            <intent-filter >
+                <action android:name="cn.edu.tsinghua.hpc.LOADING_REQUEST" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="LaunchAppService" >
+        </service>
+
+        <activity
+            android:name="NotificationActivity"
+            android:theme="@android:style/Theme.Dialog" android:screenOrientation="portrait" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MarketActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

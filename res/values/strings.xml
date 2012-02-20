@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Smile Market</string>
+    <string name="loading">Loading&amp;#8230;</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="unsubscribe">UnSubscribe</string>
+</resources>
